@@ -13,59 +13,48 @@
     />
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header class="header">
+    <div class="overlay"></div>
+    <header>
       <div class="container">
-        <div class="header_body">
-          <div>
-            <a href="/" class="header_logo">
-              <img src="./images/logo.svg" alt="logo"
-            /></a>
-          </div>
-          <div class="header_burger">
-            <span></span>
-          </div>
-          <nav class="header_menu">
-            <ul class="header_list">
-              <li><a href="/" class="header_link">Features</a></li>
-              <li><a href="/" class="header_link">Company</a></li>
-              <li><a href="/" class="header_link">Careers</a></li>
-              <li><a href="/" class="header_link">About</a></li>
-            </ul>
-            <ul class="header_list">
-              <li><a href="/" class="header_link">Login</a></li>
-              <li><a href="/" class="header_link">Register</a></li>
-            </ul>
-          </nav>
+        <img src="./images/logo.svg" alt="" />
+        <div id="menu-icon">
+          <img onclick="teste()" src="./images/icon-menu.svg" alt="" />
         </div>
+        <ul class="nav-menu" id="menu">
+          <li><a href="/">Features</a></li>
+          <li><a href="/">Company</a></li>
+          <li><a href="/">Careers</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Login</a></li>
+          <li><a href="/">Register</a></li>
+        </ul>
       </div>
     </header>
+
     <main>
       <div class="wrapper">
-        <div class="container">
-          <div class="image-area">
-            <picture>
-              <source
-                srcset="./images/image-hero-mobile.png"
-                type="image/jpg"
-                media="(max-width:992px)"
-              />
-              <img src="./images/image-hero-desktop.png" alt="image hero" />
-            </picture>
-          </div>
-          <div class="text-area">
+        <div class="container d-flex align-items-end">
+          <div class="text-area d-flex flex-column">
             <h1>Make remote work</h1>
 
             <p>
@@ -76,14 +65,33 @@
             <button>Learn more</button>
 
             <div class="d-flex">
-              <img src="./images/client-databiz.svg" alt="client databiz" />
-              <img
-                src="./images/client-audiophile.svg"
-                alt="client audiophile"
-              />
-              <img src="./images/client-meet.svg" alt="client meet" />
-              <img src="./images/client-maker.svg" alt="client maker" />
+              <div class="images-client">
+                <img src="./images/client-databiz.svg" alt="client databiz" />
+              </div>
+              <div class="images-client">
+                <img
+                  src="./images/client-audiophile.svg"
+                  alt="client audiophile"
+                />
+              </div>
+              <div class="images-client">
+                <img src="./images/client-meet.svg" alt="client meet" />
+              </div>
+              <div class="images-client">
+                <img src="./images/client-maker.svg" alt="client maker" />
+              </div>
             </div>
+          </div>
+
+          <div class="image">
+            <picture>
+              <source
+                srcset="./images/image-hero-mobile.png"
+                type="image/jpg"
+                media="(max-width:992px)"
+              />
+              <img src="./images/image-hero-desktop.png" alt="image hero" />
+            </picture>
           </div>
         </div>
       </div>
@@ -96,5 +104,28 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </footer>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- script for navbar -->
+    <script>
+      function teste() {
+        if (document.getElementById("menu").style.display == "block") {
+          document.getElementById("menu").style.display = "none";
+          document.getElementById("menu-icon").innerHTML =
+            '<img onclick="teste()" src="./images/icon-menu.svg" alt="">';
+          document.querySelector(".overlay").style.display = "none";
+        } else {
+          document.getElementById("menu").style.display = "block";
+          document.getElementById("menu-icon").innerHTML =
+            '<img onclick="teste()" src="./images/icon-close-menu.svg" alt="">';
+          document.querySelector(".overlay").style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
