@@ -105,6 +105,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   color: var(--medium-gray);
+  background-color: hsl(0, 0%, 98%);
 }
 main {
   flex: 1 1 auto;
@@ -117,6 +118,8 @@ main {
   position: relative;
 }
 .container {
+  display: flex;
+  flex-direction: row;
   max-width: 1200px;
   margin: 40px auto 0 auto;
   padding: 0 15px;
@@ -143,23 +146,31 @@ header {
   position: relative;
 }
 header .container {
+  padding: 0 3%;
+  max-width: 1440px;
   justify-content: start;
   align-items: center;
-  max-width: 1440px;
 }
 header .nav-menu {
   margin: 0;
   padding: 0;
   width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
-
 header li {
   display: inline-block;
   margin-left: 4rem;
 }
+.login li:last-child {
+  border: 1px solid var(--medium-gray);
+  border-radius: 15px;
+  padding: 15px 20px;
+}
 header a {
-  color: #000;
+  color: var(--medium-gray);
   text-decoration: none;
 }
 header a:hover {
@@ -167,10 +178,13 @@ header a:hover {
 }
 
 .text-area {
+  display: flex;
   flex: 1;
   padding-right: 11%;
+  order: 1;
 }
 .text-area h1 {
+  margin: 0;
   font-size: 4.3em;
   font-weight: 700;
   color: var(--almost-black);
@@ -210,9 +224,11 @@ header a:hover {
 
 .image-area {
   flex: 1;
+  display: flex;
   min-height: 700px;
   overflow: hidden;
   position: relative;
+  order: 2;
 }
 .image-area img {
   object-fit: contain;
@@ -245,8 +261,9 @@ header a:hover {
 }
 @media screen and (max-width: 767px) {
   .container {
+    flex-direction: column;
     max-width: none;
-    padding: 0 30px;
+    padding: 0;
     margin: 0;
   }
 
@@ -254,13 +271,14 @@ header a:hover {
   body .lock {
     overflow: hidden;
   }
-
-  #menu-icon {
-    z-index: 4;
-    display: block;
+  header .container {
+    padding: 0 20px;
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-
-  .nav-menu {
+  header .nav-menu {
     display: none;
     position: absolute;
     width: 70%;
@@ -271,9 +289,44 @@ header a:hover {
     padding: 10rem 0;
     z-index: 3;
   }
-
+  #menu-icon {
+    z-index: 4;
+    display: block;
+  }
   .nav-menu li {
     display: block;
     margin-bottom: 1rem;
+  }
+
+  .text-area {
+    order: 2;
+    padding: 40px 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .text-area h1 {
+    font-size: 1.9em;
+  }
+  .text-area p {
+    margin: 7% 0;
+    padding-right: 0;
+    font-size: 16px;
+  }
+
+  .image-area {
+    order: 1;
+    min-height: 200px;
+  }
+  .image-area img {
+    position: unset;
+  }
+
+  .images-client {
+    justify-content: center;
+    min-height: 0px;
+  }
+  .images-client img {
+    position: unset;
+    width: 85%;
   }
 }
