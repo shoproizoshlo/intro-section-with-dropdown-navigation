@@ -122,7 +122,6 @@ main {
   padding: 0 15px;
 }
 
-/* navbar */
 .overlay {
   display: none;
   height: 100%;
@@ -133,6 +132,8 @@ main {
   top: 0;
   z-index: 2;
 }
+
+/* navbar */
 #menu-icon {
   display: none;
   transition: all 0.5s ease;
@@ -141,23 +142,26 @@ header {
   padding: 2rem 0;
   position: relative;
 }
-
 header .container {
-  display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   max-width: 1440px;
 }
-header li {
-  display: inline-block;
-  margin: 0 0 0 2.2rem;
+header .nav-menu {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
 }
 
+header li {
+  display: inline-block;
+  margin-left: 4rem;
+}
 header a {
   color: #000;
   text-decoration: none;
 }
-
 header a:hover {
   color: hsl(35, 77%, 62%);
 }
