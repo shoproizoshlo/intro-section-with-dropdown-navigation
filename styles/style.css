@@ -117,7 +117,7 @@ main {
   position: relative;
 }
 .container {
-  max-width: 1145px;
+  max-width: 1200px;
   margin: 40px auto 0 auto;
   padding: 0 15px;
 }
@@ -163,16 +163,17 @@ header a:hover {
 }
 
 .text-area {
-  padding-right: 7%;
+  flex: 1;
+  padding-right: 11%;
 }
 .text-area h1 {
-  font-size: 5.5em;
+  font-size: 4.3em;
   font-weight: 700;
   color: var(--almost-black);
 }
 .text-area p {
-  margin: 50px 0;
-  padding-right: 30%;
+  margin: 10% 0;
+  padding-right: 10%;
   line-height: 25px;
 }
 .text-area button {
@@ -182,31 +183,35 @@ header a:hover {
   background: var(--almost-black);
   color: var(--almost-white);
 }
+
+.clients {
+  margin-top: 20%;
+}
 /* for responsive images */
 .images-client {
   flex: 1;
-  min-height: 45px;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
   overflow: hidden;
   position: relative;
 }
 .images-client img {
   object-fit: cover;
-  object-position: center;
+  object-position: right;
   position: absolute;
-  width: 50%;
+  width: 70%;
   height: auto;
-  top: 0;
-  left: 0;
 }
 
-.image {
-  flex: 0 0 33.3333%;
-  min-height: 150px;
+.image-area {
+  flex: 1;
+  min-height: 700px;
   overflow: hidden;
   position: relative;
 }
-.image img {
-  object-fit: cover;
+.image-area img {
+  object-fit: contain;
   object-position: right;
   position: absolute;
   width: 100%;
