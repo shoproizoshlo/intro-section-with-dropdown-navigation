@@ -139,7 +139,6 @@ main {
 /* navbar */
 #menu-icon {
   display: none;
-  transition: all 0.5s ease;
 }
 header {
   padding: 2rem 0;
@@ -168,6 +167,7 @@ header li {
   border: 1px solid var(--medium-gray);
   border-radius: 15px;
   padding: 15px 20px;
+  transition: all 0.5s ease;
 }
 .login li:last-child:active,
 .login li:last-child:hover {
@@ -176,6 +176,7 @@ header li {
 header a {
   color: var(--medium-gray);
   text-decoration: none;
+  transition: all 0.5s ease;
 }
 header a:hover,
 header a:active {
@@ -204,8 +205,16 @@ header a:active {
   padding: 20px 10px;
   border-radius: 15px;
   width: 170px;
-  background: var(--almost-black);
+  background-color: var(--almost-black);
+  border: 1px solid var(--almost-black);
   color: var(--almost-white);
+  transition: all 0.3s ease;
+}
+.text-area button:hover,
+.text-area button:active {
+  cursor: pointer;
+  background-color: var(--almost-white);
+  color: var(--almost-black);
 }
 
 .clients {
@@ -285,14 +294,14 @@ header a:active {
     align-items: center;
   }
   header .nav-menu {
+    padding: 7rem 0;
     display: none;
     position: absolute;
     width: 70%;
     left: 30%;
     top: 0;
     height: 100vh;
-    background-color: #fff;
-    padding: 7rem 0;
+    background-color: var(--almost-white);
     z-index: 3;
   }
   #menu-icon {
