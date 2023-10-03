@@ -183,6 +183,41 @@ header a:active {
   cursor: pointer;
   color: var(--almost-black);
 }
+.nav-item a,
+.nav-item img,
+.dropdown-menu a,
+.dropdown-menu img {
+  display: inline;
+  align-items: center;
+}
+.nav-item img {
+  position: relative;
+  top: 6px;
+}
+.dropdown-menu img {
+  padding-right: 5px;
+  position: relative;
+  top: -2px;
+}
+.dropdown-menu {
+  padding: 20px;
+  transform: translate3d(-130px, 20px, 0px);
+  inset: unset;
+  width: 180px;
+  /* transform: translate3d(-82px, 30px, 0px); */
+  transform: translate(-82px, 30px);
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.dropdown-item {
+  padding: 0;
+  color: var(--medium-gray);
+}
 
 .text-area {
   display: flex;
