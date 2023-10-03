@@ -26,7 +26,7 @@ toggleLine.forEach((line, index) => {
     const targetId = line.getAttribute("data-target");
     const targetElement = document.getElementById(targetId);
     //   setting max-height to the toggle menu
-    targetElement.style.maxHeight = "150px";
+    targetElement.style.maxHeight = "250px";
 
     if (currentOpenLine && currentOpenLine !== line) {
       const currentTargetId = currentOpenLine.getAttribute("data-target");
@@ -43,6 +43,7 @@ toggleLine.forEach((line, index) => {
 
     if (targetElement.classList.contains("open")) {
       targetElement.classList.remove("open");
+      targetElement.style.maxHeight = "0";
     } else {
       targetElement.classList.add("open");
     }
