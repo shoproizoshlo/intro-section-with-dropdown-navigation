@@ -17,7 +17,6 @@ document.getElementById("menu-icon").addEventListener("click", () => {
 const toggleButtons = document.querySelectorAll(".icon-arrow-down");
 const toggleLine = document.querySelectorAll(".q-line");
 const toggleTexts = document.querySelectorAll(".toggle-text");
-// const questionTexts = document.querySelectorAll(".question");
 
 let currentOpenButton = null;
 let currentOpenLine = null;
@@ -26,6 +25,7 @@ toggleLine.forEach((line, index) => {
   line.addEventListener("click", () => {
     const targetId = line.getAttribute("data-target");
     const targetElement = document.getElementById(targetId);
+    //   setting max-height to the toggle menu
     targetElement.style.maxHeight = "150px";
 
     if (currentOpenLine && currentOpenLine !== line) {
@@ -34,6 +34,7 @@ toggleLine.forEach((line, index) => {
 
       currentTargetElement.classList.remove("open");
       currentOpenLine.classList.remove("closing");
+      //   setting max-height to the toggle menu
       currentTargetElement.style.maxHeight = "0";
       toggleButtons.forEach((button) => {
         button.classList.remove("closing");
