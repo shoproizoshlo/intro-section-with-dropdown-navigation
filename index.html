@@ -38,59 +38,60 @@
       <div class="container">
         <img src="./images/logo.svg" alt="" />
         <div id="menu-icon">
-          <img onclick="teste()" src="./images/icon-menu.svg" alt="" />
+          <img src="./images/icon-menu.svg" alt="" />
         </div>
         <ul class="nav-menu" id="menu">
           <div>
-            <li class="nav-item dropdown" data-bs-toggle="dropdown">
-              <a
-                class="nav-link"
-                href="#"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Features</a
-              ><img src="./images/icon-arrow-down.svg" alt="" class="ms-2" />
-              <ul class="dropdown-menu">
-                <li>
-                  <img src="./images/icon-todo.svg" alt="" /><a
-                    class="dropdown-item"
-                    href="#"
-                    >Todo List</a
-                  >
-                </li>
-                <li>
-                  <img src="./images/icon-calendar.svg" alt="" /><a
-                    class="dropdown-item"
-                    href="#"
-                    >Calendar</a
-                  >
-                </li>
-                <li>
-                  <img src="./images/icon-reminders.svg" alt="" /><a
-                    class="dropdown-item"
-                    href="#"
-                    >Reminders</a
-                  >
-                </li>
-                <li>
-                  <img src="./images/icon-planning.svg" alt="" /><a
-                    class="dropdown-item"
-                    href="#"
-                    >Planning</a
-                  >
-                </li>
-              </ul>
+            <li class="q-line" data-target="answer-1">
+              <a href="#">Features</a
+              ><img
+                src="./images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                class="icon-arrow-down"
+                data-target="answer-1"
+              />
+              <div class="toggle-text" id="answer-1">
+                <ul>
+                  <li>
+                    <img src="./images/icon-todo.svg" alt="" /><a href="#"
+                      >Todo List</a
+                    >
+                  </li>
+                  <li>
+                    <img src="./images/icon-calendar.svg" alt="" /><a href="#"
+                      >Calendar</a
+                    >
+                  </li>
+                  <li>
+                    <img src="./images/icon-reminders.svg" alt="" /><a href="#"
+                      >Reminders</a
+                    >
+                  </li>
+                  <li>
+                    <img src="./images/icon-planning.svg" alt="" /><a href="#"
+                      >Planning</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li>
+            <li class="q-line" data-target="answer-2">
               <a href="#">Company</a
-              ><img src="./images/icon-arrow-down.svg" alt="" class="ms-2" />
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
+              ><img
+                src="./images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                class="icon-arrow-down"
+                data-target="answer-2"
+              />
+              <div class="toggle-text" id="answer-2">
+                <ul>
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">Our team</a></li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li><a href="/">Careers</a></li>
             <li><a href="/">About</a></li>
