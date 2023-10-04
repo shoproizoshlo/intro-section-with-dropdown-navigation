@@ -365,8 +365,8 @@ header a:active {
   }
   .nav-menu li {
     display: block;
-    margin-bottom: 2rem;
-    margin-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
   }
   .login {
     margin-top: 3rem;
@@ -386,6 +386,23 @@ header a:active {
     border: 2px solid var(--medium-gray);
     width: -webkit-fill-available;
     margin: 0 2rem;
+  }
+  .toggle-text {
+    position: unset;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .toggle-text ul {
+    padding: 30px 0 0 25px;
+    background-color: var(--almost-white);
+    border-radius: 0;
+  }
+  .toggle-text li {
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+  }
+  .toggle-text li:last-child {
+    margin-bottom: 0.5rem;
   }
 
   .text-area {
