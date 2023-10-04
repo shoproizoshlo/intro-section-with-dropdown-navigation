@@ -325,15 +325,8 @@ header a:active {
 }
 @media screen and (max-width: 992px) {
   .container {
+    margin: 0 auto;
     max-width: 750px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .container {
-    flex-direction: column;
-    max-width: none;
-    padding: 0;
-    margin: 0;
   }
 
   /* navbar */
@@ -341,6 +334,7 @@ header a:active {
     overflow: hidden;
   }
   header .container {
+    margin: 20px auto 0 auto;
     padding: 0 20px;
     max-width: none;
     flex-direction: row;
@@ -402,6 +396,25 @@ header a:active {
   }
   .toggle-text li:last-child {
     margin-bottom: 0.5rem;
+  }
+
+  .text-area h1 {
+    font-size: 2.7em;
+  }
+  .text-area p {
+    padding-right: 0;
+  }
+
+  .image-area {
+    min-height: 500px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    max-width: none;
+    padding: 0;
+    margin: 0;
   }
 
   .text-area {
