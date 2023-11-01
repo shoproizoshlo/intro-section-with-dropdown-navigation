@@ -33,7 +33,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/shoproizoshlo/intro-section-with-dropdown-navigation-main
 - Live Site URL: https://sue-section-with-dropdown-navigation.netlify.app/
 
 ## My process
@@ -73,6 +72,4 @@ toggleLine.forEach((line, index) => {
 
 ## Author
 
-- Website - [Sue Brechko](https://github.com/shoproizoshlo)
 - Frontend Mentor - [@shoproizoshlo](https://www.frontendmentor.io/profile/shoproizoshlo)
-- Twitter - [@suereact](https://www.twitter.com/suereact)
